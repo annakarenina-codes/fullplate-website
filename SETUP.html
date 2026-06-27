@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullplate Setup Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #3d2817 0%, #5c3d2e 100%);
+            color: #fff;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            color: #2c2c2c;
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #D4AF37;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            color: #3d2817;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .success {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+        }
+
+        .success p {
+            color: #2e7d32;
+            margin: 0;
+        }
+
+        .step {
+            background: #f5f5f5;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #D4AF37;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #D4AF37;
+            color: #3d2817;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 1rem;
+            vertical-align: top;
+        }
+
+        .step-content {
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - 50px);
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: #3d2817;
+            margin-bottom: 0.5rem;
+        }
+
+        .file-path {
+            background: #fff;
+            padding: 0.8rem;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+            word-break: break-all;
+        }
+
+        .image-list {
+            background: #fff;
+            border: 2px dashed #D4AF37;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .image-list li {
+            margin-bottom: 0.8rem;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .image-list li:before {
+            content: "📁";
+            margin-right: 1rem;
+        }
+
+        code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: #D4AF37;
+            color: #3d2817;
+        }
+
+        .btn-primary:hover {
+            background: #E8B923;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #3d2817;
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            background: #5c3d2e;
+            transform: translateY(-2px);
+        }
+
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .note strong {
+            color: #d39e00;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-box {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 4px solid #D4AF37;
+        }
+
+        .feature-box h3 {
+            color: #D4AF37;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-box p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍽️ Fullplate Landing Page - Setup Guide</h1>
+
+        <div class="success">
+            <p>✅ <strong>Project Created Successfully!</strong> Your beautiful, responsive landing page is ready to go.</p>
+        </div>
+
+        <h2>📍 Project Location</h2>
+        <div class="file-path">
+            C:\Users\aquarius12\fullplate-landing
+        </div>
+
+        <h2>📸 Add Your Images</h2>
+        <p>Place the following images in the <code>assets/</code> folder:</p>
+        <ul class="image-list">
+            <li><strong>logo.png</strong> - Your Fullplate company logo</li>
+            <li><strong>hero.jpg</strong> - Hero section background (high-quality food/dining image)</li>
+            <li><strong>appetizers.jpg</strong> - Appetizers product image</li>
+            <li><strong>pizzas.jpg</strong> - Pizzas product image</li>
+            <li><strong>spuds.jpg</strong> - Jacket potatoes product image</li>
+            <li><strong>chef.jpg</strong> - Chef Airo Malinao professional portrait</li>
+        </ul>
+
+        <h2>🚀 Quick Start</h2>
+
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <div class="step-title">Navigate to Project Directory</div>
+                <p>Open your terminal/command prompt and go to:</p>
+                <div class="file-path">cd C:\Users\aquarius12\fullplate-landing</div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <div class="step-title">Start a Local Server</div>
+                <p>Choose one of these commands:</p>
+                <div class="file-path">python -m http.server 8000</div>
+                <p style="margin-top: 0.5rem;">Or if using Python 2:</p>
+                <div class="file-path">python -m SimpleHTTPServer 8000</div>
+                <p style="margin-top: 0.5rem;">Or with Node.js:</p>
+                <div class="file-path">npx http-server</div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <div class="step-title">View Your Site</div>
+                <p>Open your browser and visit:</p>
+                <div class="file-path">http://localhost:8000</div>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>📝 Note:</strong> A local server is required for the parallax effects and all features to work properly. Simply opening the HTML file in a browser may cause issues with image loading and JavaScript functionality.
+        </div>
+
+        <h2>✨ Key Features Included</h2>
+        <div class="features">
+            <div class="feature-box">
+                <h3>📱 Responsive Design</h3>
+                <p>Looks perfect on desktop, tablet, and mobile devices</p>
+            </div>
+            <div class="feature-box">
+                <h3>🎨 Dynamic Animations</h3>
+                <p>Smooth parallax scrolling and fade-in effects</p>
+            </div>
+            <div class="feature-box">
+                <h3>🎯 Professional Typography</h3>
+                <p>Clean, modern fonts with proper hierarchy</p>
+            </div>
+            <div class="feature-box">
+                <h3>🍴 Chef Spotlight</h3>
+                <p>Dedicated section for Chef Airo's credentials</p>
+            </div>
+            <div class="feature-box">
+                <h3>🔍 Search Button</h3>
+                <p>Interactive search functionality placeholder</p>
+            </div>
+            <div class="feature-box">
+                <h3>📞 Contact Section</h3>
+                <p>Email and contact information placeholder</p>
+            </div>
+        </div>
+
+        <h2>📂 Project Files</h2>
+        <ul class="image-list">
+            <li><strong>index.html</strong> - Main page structure</li>
+            <li><strong>css/styles.css</strong> - All styling and animations</li>
+            <li><strong>js/script.js</strong> - Parallax, navigation, interactions</li>
+            <li><strong>assets/</strong> - Folder for your images</li>
+            <li><strong>README.md</strong> - Full documentation</li>
+        </ul>
+
+        <h2>🎨 Color Scheme</h2>
+        <p>Your landing page features a sophisticated color palette inspired by your products:</p>
+        <ul class="image-list">
+            <li><strong>Primary Dark:</strong> #3d2817 (Rich brown)</li>
+            <li><strong>Accent Gold:</strong> #D4AF37 (Luxurious gold)</li>
+            <li><strong>Cream:</strong> #FFF8F0 (Warm off-white)</li>
+            <li><strong>Appetizers:</strong> Gold/Amber tones</li>
+            <li><strong>Pizzas:</strong> Warm stone/beige</li>
+            <li><strong>Spuds:</strong> Earthy brown/cream</li>
+        </ul>
+
+        <h2>🔧 Customization Tips</h2>
+        <p><strong>Change the company quote?</strong> Edit line in <code>index.html</code> with class <code>hero-quote</code></p>
+        <p><strong>Update product descriptions?</strong> Find sections with class <code>feature-description</code></p>
+        <p><strong>Modify colors?</strong> Edit CSS variables in <code>css/styles.css</code> under <code>:root {}</code></p>
+        <p><strong>Add more sections?</strong> Use the existing HTML structure as a template</p>
+
+        <h2>📖 Browser Support</h2>
+        <ul class="image-list">
+            <li>✅ Chrome/Edge (Full support)</li>
+            <li>✅ Firefox (Full support)</li>
+            <li>✅ Safari (Full support)</li>
+            <li>✅ Mobile browsers (Fully responsive)</li>
+        </ul>
+
+        <h2>🎯 Next Steps</h2>
+        <ol style="padding-left: 2rem; margin: 1.5rem 0;">
+            <li>Add your 6 images to the <code>assets/</code> folder</li>
+            <li>Start the local server</li>
+            <li>Open http://localhost:8000 in your browser</li>
+            <li>Customize colors, text, and content as needed</li>
+            <li>Deploy to your hosting provider when ready</li>
+        </ol>
+
+        <div class="button-group">
+            <button class="btn-primary" onclick="alert('Navigate to: C:\\Users\\aquarius12\\fullplate-landing')">📁 Open Folder</button>
+            <button class="btn-secondary" onclick="window.open('file:///C:/Users/aquarius12/fullplate-landing/README.md')">📖 Read Full Docs</button>
+        </div>
+
+        <div class="note" style="margin-top: 3rem;">
+            <strong>💡 Pro Tip:</strong> For the best parallax effect experience, use a high-quality hero image with good depth and contrast. The modern design works especially well with food photography that has rich, warm tones.
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #ddd;">
+            <p style="color: #999; font-size: 0.9rem;">Built with ❤️ for Fullplate Restaurant Management</p>
+            <p style="color: #D4AF37; font-weight: 600; margin-top: 1rem;">Ready to showcase your expertise!</p>
+        </div>
+    </div>
+</body>
+</html>
