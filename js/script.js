@@ -232,6 +232,32 @@ class ButtonInteractions {
     }
 }
 
+class FeatureSliders {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        document.querySelectorAll('.feature-slider').forEach(slider => {
+            const images = slider.querySelectorAll('img');
+            if (!images.length) return;
+
+            let currentIndex = 0;
+            const updateSlider = () => {
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            };
+
+            const advance = () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateSlider();
+            };
+
+            updateSlider();
+            setInterval(advance, 3500);
+        });
+    }
+}
+
 // Add ripple effect styles
 const rippleStyle = document.createElement('style');
 rippleStyle.textContent = `
@@ -359,6 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new Navigation();
     new ScrollAnimations();
     new ButtonInteractions();
+    new FeatureSliders();
     new LazyLoadImages();
     new NavbarScrollEffect();
     
